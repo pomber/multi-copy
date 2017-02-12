@@ -9,7 +9,8 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava",
+    "watch:test": "ava --watch"
   },
   "files": [
     "index.js"
@@ -28,7 +29,12 @@
     "config"
   ],
   "devDependencies": {
+    "ava": "^0.18.1",
+    "rimraf": "^2.5.4",
     "tempfile": "^1.1.1",
     "xo": "^0.17.1"
+  },
+  "dependencies": {
+    "cpy": "^5.0.0"
   }
 }
