@@ -64,7 +64,7 @@ test('files from one src are copied to one dest', async t => {
 		files: files
 	});
 
-	const missing = missingFiles(t.context.dest, files);
+	const missing = missingFiles(t.context.dest, ['foo.txt', 'bar.txt']);
 	t.deepEqual(missing, []);
 });
 

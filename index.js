@@ -16,7 +16,7 @@ function multicopy(src, dest, configs) {
 
 	const promises = items.map(item => {
 		if (typeof item === 'string') {
-			return cpy(join(src, item), join(dest, item));
+			return cpy(join(src, item), dest);
 		}
 		const newSrc = join(src, item.from);
 		const newDest = join(dest, item.to);
