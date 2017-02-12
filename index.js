@@ -27,5 +27,6 @@ function multicopy(src, dest, configs) {
 }
 
 module.exports = config => {
-	return multicopy(config.from, config.to, config.files);
+	return multicopy(config.from, config.to, config.files)
+		.then(() => config.to);
 };
