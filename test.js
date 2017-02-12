@@ -67,3 +67,22 @@ test('files from one src are copied to one dest', async t => {
 	const missing = missingFiles(t.context.dest, files);
 	t.deepEqual(missing, []);
 });
+
+test('files from two src are copied to one dest', async t => {
+	const files = ['one/a.t', 'two/b.t', 'two/c.t'];
+	fixture(t.context.src, files);
+
+	await multicopy({
+		to: t.context.dest,
+		files: [{
+			from: path.join(t.context.src, 'one'),
+			files: 'a.t'
+		}, {
+			from: path.join(t.context.src, 'two'),
+			files: ['b.t', 'c.t']
+		}]
+	});
+
+	const missing = missingFiles(t.context.dest, ['a.t', 'b.t', 'c.t']);
+	t.deepEqual(missing, []);
+});
