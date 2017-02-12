@@ -1,7 +1,7 @@
 {
   "name": "multi-copy",
   "version": "0.0.1",
-  "description": "Copy files from several sources to several destintations",
+  "description": "Copy files from several sources to several destinations",
   "license": "MIT",
   "repository": "pomber/multy-copy",
   "author": "pomber",
