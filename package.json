@@ -1,0 +1,34 @@
+{
+  "name": "multi-copy",
+  "version": "0.0.1",
+  "description": "Copy files from several sources to several destintations",
+  "license": "MIT",
+  "repository": "pomber/multy-copy",
+  "author": "pomber",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "copy",
+    "cp",
+    "cpy",
+    "file",
+    "files",
+    "clone",
+    "fs",
+    "file-system",
+    "multi",
+    "several",
+    "config"
+  ],
+  "devDependencies": {
+    "tempfile": "^1.1.1",
+    "xo": "^0.17.1"
+  }
+}
