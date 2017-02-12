@@ -30,5 +30,4 @@ test('single file is copied', async t => {
 	const destname = path.join(t.context.dest, basename);
 	const exists = fs.existsSync(destname);
 	t.true(exists);
-})
-
+});
