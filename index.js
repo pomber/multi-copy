@@ -1,8 +1,13 @@
 const path = require('path');
 const cpy = require('cpy');
+const arrify = require('arrify');
 
 module.exports = config => {
-	return cpy(
-		path.join(config.from, config.files),
-		path.join(config.to, config.files));
+	const files = arrify(config.files);
+	const promises = files.map(file => {
+		return cpy(
+			path.join(config.from, file),
+			path.join(config.to, file));
+	});
+	return Promise.all(promises);
 };
